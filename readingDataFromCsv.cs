@@ -6,8 +6,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-//WRITE TO FILE
-        //         List<Rechnung> rechnungen = new List<Rechnung>()
+// Main write to csv file        
+        // List<Rechnung> rechnungen = new List<Rechnung>()
         // {
         //     new Rechnung(1, 1001, 5.0f),
         //     new Rechnung(3, 1003, 2.0f),
@@ -33,7 +33,8 @@ internal class Program
         //     new Artikel(1003, "PC", 1250.0f),
         // };
         // Artikel.ToCSV(artikels);
-// READ FROM FILE
+
+// Main read from csv file
         Console.WriteLine("-----------------Kunden----------------");
         List<Kunde> kunden = Kunde.FromCSV();
         foreach (Kunde kunde in kunden)
@@ -61,6 +62,7 @@ internal class Program
         Console.WriteLine("---------------Gesamtbetrag--------------");
         GesamtbetragProKunde(kunden, rechnungen, artikelDictionary);
     }
+    //Gesamtbetrage rechnen
     public static void GesamtbetragProKunde(List<Kunde> kunden, List<Rechnung> rechnungen, Dictionary<int, Artikel> artikelDictionary)
     {
         foreach (var kunde in kunden)

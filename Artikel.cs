@@ -11,16 +11,13 @@ public class ArtikelModel
 
 public class Artikel : ArtikelModel
 {
-    public int ArtikelNr { get; set; }
-    public string Name { get; set; }
-    public float Preis { get; set; }
-
     public Artikel(int artikelNr, string name, float preis)
     {
         ArtikelNr = artikelNr;
         Name = name;
         Preis = preis;
     }
+// Write to csv file
     // public string ToCSV()
     // {
     //     return $"{ArtikelNr};{Name};{Preis}";
@@ -28,7 +25,7 @@ public class Artikel : ArtikelModel
 
     // public static void ToCSV(List<Artikel> artikels)
     // {
-    //     using (StreamWriter sw = new StreamWriter("Artikel.csv"))
+    //     using (StreamWriter sw = new StreamWriter("Artikel1.csv"))
     //     {
     //         foreach (Artikel artikel in artikels)
     //         {
@@ -36,11 +33,13 @@ public class Artikel : ArtikelModel
     //         }
     //     }
     // }
+
+// Read from csv    
     public static List<Artikel> FromCSV()
     {
         List<Artikel> artikels = new List<Artikel>();
 
-        using (StreamReader sr = new StreamReader("ArtikelTEST.csv"))
+        using (StreamReader sr = new StreamReader("Artikel1.csv"))
         {
             string line;
             while ((line = sr.ReadLine()) != null)

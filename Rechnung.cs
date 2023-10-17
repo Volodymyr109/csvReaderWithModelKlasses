@@ -16,6 +16,7 @@ public class Rechnung : RechnungModel
         ArtikelNr = artikelNr;
         Anzahl = anzahl;
     }
+// Write to csv file
     // public string ToCSV()
     // {
     //     return KundenNr + ";" + ArtikelNr + ";" + Anzahl;
@@ -23,7 +24,7 @@ public class Rechnung : RechnungModel
 
     // public static void ToCSV(List<Rechnung> rechnungen)
     // {
-    //     using (StreamWriter sw = new StreamWriter("RechnungTEST.csv"))
+    //     using (StreamWriter sw = new StreamWriter("Rechnung1.csv"))
     //     {
     //         foreach (Rechnung rechnung in rechnungen)
     //         {
@@ -31,12 +32,12 @@ public class Rechnung : RechnungModel
     //         }
     //     }
     // }
-
+// Read from csv
     public static List<Rechnung> FromCSV()
     {
         List<Rechnung> rechnungen = new List<Rechnung>();
 
-        using (StreamReader sr = new StreamReader("RechnungTEST.csv"))
+        using (StreamReader sr = new StreamReader("Rechnung1.csv"))
         {
             string line;
             while ((line = sr.ReadLine()) != null)

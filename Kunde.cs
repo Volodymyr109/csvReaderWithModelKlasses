@@ -19,6 +19,7 @@ public class Kunde : KundenModel
         Strasse = strasse;
         Ort = ort;
     }
+// Write to csv file
     // public string ToCSV()
     // {
     //     return $"{KundenNr};{Name};{Strasse};{Ort}";
@@ -26,7 +27,7 @@ public class Kunde : KundenModel
 
     // public static void ToCSV(List<Kunde> kunden)
     // {
-    //     using (StreamWriter sw = new StreamWriter("Kunden.csv"))
+    //     using (StreamWriter sw = new StreamWriter("Kunden1.csv"))
     //     {
     //         foreach (Kunde kunde in kunden)
     //         {
@@ -34,11 +35,12 @@ public class Kunde : KundenModel
     //         }
     //     }
     // }
+// Read from csv    
     public static List<Kunde> FromCSV()
     {
         List<Kunde> kunden = new List<Kunde>();
 
-        using (StreamReader sr = new StreamReader("KundenTEST.csv"))
+        using (StreamReader sr = new StreamReader("Kunden1.csv"))
         {
             string line;
             while ((line = sr.ReadLine()) != null)
