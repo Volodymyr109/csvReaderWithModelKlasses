@@ -81,4 +81,16 @@ internal class Program
             Console.WriteLine($"Kunde: {kunde.Name}, Gesamtbetrag: {gesamtbetrag} €");
         }
     }
+    // Alternative kuerzere funktion
+// public static void GesamtbetragProKunde(List<Kunde> kunden, List<Rechnung> rechnungen, Dictionary<int, Artikel> artikelDictionary)
+// {
+//     foreach (var kunde in kunden)
+//     {
+//         float gesamtbetrag = rechnungen
+//             .Where(r => r.KundenNr == kunde.KundenNr)
+//             .Sum(r => artikelDictionary.TryGetValue(r.ArtikelNr, out var artikel) ? r.Anzahl * artikel.Preis : 0.0f);
+
+//         Console.WriteLine($"Kunde: {kunde.Name}, Gesamtbetrag: {gesamtbetrag} €");
+//     }
+// }
 }
