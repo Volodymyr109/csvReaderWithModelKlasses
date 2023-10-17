@@ -6,6 +6,34 @@ internal class Program
 {
     static void Main(string[] args)
     {
+//WRITE TO FILE
+        //         List<Rechnung> rechnungen = new List<Rechnung>()
+        // {
+        //     new Rechnung(1, 1001, 5.0f),
+        //     new Rechnung(3, 1003, 2.0f),
+        //     new Rechnung(4, 1002, 6.0f),
+        //     new Rechnung(2, 1003, 1.0f),
+
+        // };
+        // Rechnung.ToCSV(rechnungen);
+
+        // List<Kunde> kunden = new List<Kunde>()
+        // {
+        //     new Kunde(1, "Max", "Mozartstr", "Osna"),
+        //     new Kunde(2, "Alice", "Musterstr", "DD"),
+        //     new Kunde(3, "Bob", "Strassestr", "HH"),
+        //     new Kunde(4, "Alex", "Osna.str", "H"),
+        // };
+        // Kunde.ToCSV(kunden);
+
+        // List<Artikel> artikels = new List<Artikel>()
+        // {
+        //     new Artikel(1001, "Sony", 130.0f),
+        //     new Artikel(1002, "Xbox", 250.0f),
+        //     new Artikel(1003, "PC", 1250.0f),
+        // };
+        // Artikel.ToCSV(artikels);
+// READ FROM FILE
         Console.WriteLine("-----------------Kunden----------------");
         List<Kunde> kunden = Kunde.FromCSV();
         foreach (Kunde kunde in kunden)
